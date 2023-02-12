@@ -1,6 +1,7 @@
 var topics = ["Full House", "Grey's Anatomy", "How to Get Away with Murder", "One Tree Hill", "Gossip Girl", "The Good Doctor", "Pokemon", "Naruto"];
-var numberOfGIFs = 10;
+var numberOfGIFs = 15;
 var cutOffRating = "PG-13";
+var API = config.API;
 
 function renderButtons(){
 	for(var i = 0; i < topics.length; i++) {
@@ -32,7 +33,7 @@ function addButton(show){
 function populateGIFContainer(show){
 	$.ajax({
 		url: "https://api.giphy.com/v1/gifs/search?q=" + show + 
-		"&api_key=61TKqzUDPHfv40Bqr6iEsqqBCfa360mt&rating=" + cutOffRating + "&limit=" + numberOfGIFs,
+		API + cutOffRating + "&limit=" + numberOfGIFs,
 		method: "GET"
 	}).then(function(response){
 		response.data.forEach(function(element){
