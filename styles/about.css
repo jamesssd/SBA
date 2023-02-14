@@ -65,6 +65,9 @@ html {
     margin-right: auto;
     width: 50%;
   }
+  .card-body{
+    color: #000;
+  }
   
   @media screen and (max-width: 650px) {
     .column {

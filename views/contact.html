@@ -5,15 +5,17 @@
 		<title>GIF Generator | Contact</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="../styles/contact.css">
+        <link rel="stylesheet" type="text/css" href="../styles/style.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script type="text/javascript" src="js/app.js"></script>
 	</head>
 	<body>
-        <div class="nav">
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../views/about.html">About</a></li>
-              </ul>
+        <div class="dropdown">
+            <button class="dropbtn">Menu</button>
+            <div class="dropdown-content">
+                <a href="../index.html">Home</a>
+                <a href="../views/about.html">About</a>
+            </div>
         </div>
 
      <!--Section: Contact v.2-->
@@ -34,21 +36,21 @@
                 <div class="fcf-form-group">
                     <label for="Name" class="fcf-label">Your name</label>
                     <div class="fcf-input-group">
-                        <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+                        <input type="text" id="Name" name="Name" class="fcf-form-control" pattern="[A-Za-z]{3}" required>
                     </div>
                 </div>
         
                 <div class="fcf-form-group">
                     <label for="Email" class="fcf-label">Your email address</label>
                     <div class="fcf-input-group">
-                        <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+                        <input type="email" id="Email" name="Email" class="fcf-form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                     </div>
                 </div>
         
                 <div class="fcf-form-group">
                     <label for="Message" class="fcf-label">Your message</label>
                     <div class="fcf-input-group">
-                        <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+                        <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000"  pattern="[A-Za-z]{3}" required></textarea>
                     </div>
                 </div>
         
